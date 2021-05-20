@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Custom Properties, update these for your own design */
+
+:root {
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+    
+    --fw-reg: 300;
+    --fw-bold: 900;
+    
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #16e0bd;
+    
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+    
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+/* General styles */
+
+body {
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+section {
+    padding: 5em 2em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+strong { font-weight: var(--fw-bold) }
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
+
+
+.section__title {
+    margin-bottom: .25em;
+}
+
+.section__title--intro {
+    font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong {
+    display: block;
+}
+
+.section__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro{
+    background: var(--clr-accent);
+    padding: .25em 1em;
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    padding: .5em 1.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* header */
+
+nav { display: none; }
+
+/*  Intro section  */
+
+.intro {
+    position: relative;
+}
+
+.intro__img {
+    box-shadow: var(--bs);
+}
+
+.section__subtitle--intro {
+    display: inline-block;
+}
+
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas: 
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+    
+    .intro__img {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2;
+    }    
+    
+    .section__subtitle--intro {
+        font-size: large;
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.5em);
+    }
+}
+
+
+/*  My About Me section  */
+.about-me {
+    background-color: var(--clr-dark);
+    background-image: url(../img/cs-logo1.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--clr-light);
+    text-align: center;
+    font-weight: bold;
+}
+
+.section__title--aboutme {
+    color: var(--clr-accent);
+    position: relative;
+}
+
+.section__title--aboutme::after {
+    content: '';
+    display: block;
+    width: 5%;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-light)
+}
+
+/*  My Skills section  */
+.my-skills {
+    color: var(--clr-light);
+    text-align: center;
+    font-weight: bold;
+}
+.section__title--myskills {
+    color: var(--clr-dark);
+    position: relative;
+}
+
+.section__subtitle--myskills {
+    color: var(--clr-accent);
+    position: relative;
+}
+
+.section__title--myskills::after {
+    content: '';
+    display: block;
+    width: 25%;
+    height: 1px;
+    margin: 0.3em auto 1em;
+    background: var(--clr-accent)
+}
+
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
+}
+
+.skills-item {
+    overflow: hidden;
+}
+
+.skills-img {
+    transition: 
+        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        opacity 250ms linear;
+}
+
+.skills-img:hover {
+    transform: scale(1.2);
+    opacity: .5;
+}
+
+
+
+
+
+/*  My Work section  */
+.my-work {
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    text-align: center;
+    font-weight: bold;
+}
+.section__title--mywork {
+    color: var(--clr-out);
+    position: relative;
+}
+
+.section__subtitle--mywork {
+    color: var(--clr-accent);
+    position: relative;
+}
+
+
+
+
+/*  Footer section  */
+.footer{
+    color: var(--clr-dark);
+    background-color: white;
+    text-align: center;
+    padding: 0.5em 0;
+    font-size: var(--fs-h3);
+    font-family: 'Lato', sans-serif;
+
+}
+
+
+
+
+.footer a { 
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer__link {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+}
+.footer__link::after{
+    content: '';
+    display: block;
+    width: 15%;
+    height: 1px;
+    margin: 1em auto 1em;
+    background: var(--clr-accent)
+}
+
+.footer__link:hover,
+.social-list__link:hover {
+    opacity: .7;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 1em 0 0;
+    padding: 0;
+}
+.social-list__item {
+    margin: 0 .5em;
+}
+
+.social-list__link {
+    padding: .1em;
+}
+
+/*  Project Info section  */
+
+.container-project{
+    border: 3px solid lightgrey;
+    margin: 30px auto;
+   
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    max-width: 1300px;
+    min-height: 100px;
+    box-shadow: var(--bs);
+    font-family: 'Lato', sans-serif;
+}
+
+#project-title{
+    font-size: x-large;
+    font-style: italic;
+    font-weight: bold;
+}
+.test-info{
+    font-weight: normal;
+}
+.project-information{
+    margin: 10px auto;
+}
+
+.project-information::after{
+    content: '';
+    display: block;
+    width: 95%;
+    height: 1px;
+    margin: 1em auto 1em;
+    background: var(--clr-accent)
+}
+
+
+
+
+

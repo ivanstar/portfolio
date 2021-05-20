@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Tu Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+
+    <!-- Update these with your own fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/ivantu.png" alt="">
+        </div>
+    </header>
+
+    <!-- Introduction -->
+    <section class="intro" id="home">
+        <h1 class="section__title section__title--intro">
+            Hello World, I am<strong>Ivan Tu</strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">Software Engineer</p>
+        <img src="img/ivantu.jpg" alt="a picture of ivan" class="intro__img">
+    </section>
+
+
+    <!--About me -->
+    <section class="about-me">
+        <h2 class="section__title section__title--aboutme">About Me</h2>
+        <div class="aboutme-body">
+           <p>Hello World! My name is Ivan Tu. I am a software engineer and aspire to be an entrepreneur in the future. 
+               My primary work has been in C++ applications and web development using languages such as C++,
+               JavaScript, and Python along with frameworks such as React.js and Flask. One of my hobbies is to play and watch basketball on my free time.
+            </p>
+        </div> 
+        
+        <a href="#work" class="btn">My Work</a>
+    </section>
+
+    <section class="my-skills">
+        <h2 class="section__title section__title--myskills">My Skills</h2>
+
+        <div class="skills">
+            <div class="skills-item">
+                <img src="../img/c-logo.jpg" alt="" class="skills-img">
+            </div>
+            <div class="skills-item">
+                <img src="../img/javascript.jpg" alt="" class="skills-img">
+            </div>
+
+            <div class="skills-item">
+                <img src="../img/python-logo1.jpg" alt="" class="skills-img">
+            </div>
+
+            <div class="skills-item">
+                <img src="../img/mysql-logo.jpg" alt="" class="skills-img">
+            </div>
+            <div class="skills-item">
+                <img src="../img/dynamodb.jpg" alt="" class="skills-img">
+            </div>
+            <div class="skills-item">
+                <img src="../img/html-css-logo.jpg" alt="" class="skills-img">
+            </div>
+            <div class="skills-item">
+                <img src="../img/js-logo.jpg" alt="" class="skills-img">
+            </div>
+
+            <div class="skills-item">
+                <img src="../img/flask-logo.jpg" alt="" class="skills-img">
+            </div>
+            
+            <div class="skills-item">
+                <img src="../img/reactjs.jpg" alt="" class="skills-img">
+            </div>
+
+        </div>
+    </section>
+  
+
+    <!-- My Work -->
+    <section class="my-work" id="work">
+        <h2 class="section__title section__title--mywork">My work</h2>
+        <p class="section__subtitle section__subtitle--mywork">A selection of my range of work</p>
+
+        <div class="portfolio"> 
+            <div>
+                <div class="container-project">
+                    <div class="project-information">
+                        <h2 id="project-title"><strong>Expense Manager - Web App</strong></h2>
+                    </div>
+                    <p style="font-weight: normal;">This Web App keeps track of your records of your money inflow and outflow. 
+                        Users can label their transcations and provide its corresponding earnings or loss.
+                        It will calculate the overall earnings, loss and the current amount available. 
+                        Built with JavaScript, React, JSX, React Hooks, Context API, HTML, CSS
+                    </p>
+                    <a style="margin: 10px" href="https://react-money-expense-tracker.netlify.app" class="btn">Live</a>
+                    <a style="margin: 10px" href="#" class="btn">Github</a>
+                </div>
+            </div>
+            <div>
+                <div class="container-project">
+                    <div class="project-information">
+                        <h2 id="project-title"><strong>Task Tracker - Web App</strong></h2>
+                    </div>
+                    <p style="font-weight: normal;" class="project-info">This Web App displays and keeps track of your tasks. Users can add a task that they would like, set a reminder,
+                        and mark it as done when it is completed. 
+                         Built with JavaScript, React, React Hooks, HTML, CSS</p>
+                    <a style="margin: 10px" href="#" class="btn">Live</a>
+                    <a style="margin: 10px" href="#" class="btn">Github</a>
+                </div>
+            </div>
+
+            <div>
+                <div class="container-project">
+                    <div class="project-information">
+                        <h2 id="project-title"><strong>Compiler Analyzer - C++ Program</strong></h2>
+                    </div>
+                    <p style="font-weight: normal;">Program that would check if a text file containing syntax in C++ was syntactically correct. 
+                         The program would stream in a text file and parse its contents and ensure that it 
+                         had appropriate syntax like matching parenthesis or brackets, missing semicolons, or appropriate variable initialization.
+                         Utilized OOP architecture and Finite State Machine in code implementation.
+
+                    </p>
+                    <a style="margin: 10px" href="https://github.com/ivanstar/compiler" class="btn">Github</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- replace with your own email address -->
+        <a href="tuivanman@gmail.com" class="footer__link">tuivanman@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://www.linkedin.com/in/ivan-tu/">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://github.com/ivanstar/">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+            <!--<li class="social-list__item"><a class="social-list__link" href="https://twitter.com">c</a></li> -->
+            <!--<li class="social-list__item"><a class="social-list__link" href="https://github.com">d</a></li>-->
+        </ul>
+        </footer>
+
+        <script src="dom.js"></script>
+    </body>
+    </html>
